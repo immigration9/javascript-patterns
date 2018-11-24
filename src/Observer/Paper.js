@@ -17,6 +17,9 @@ class Paper extends Publisher {
   daily = () => {
     this.publish("[Washington Post]");
   }
+  weekly = () => {
+    this.publish("[Hustler]", "weekly");
+  }
   monthly = () => {
     this.publish("[Horse & Hounds]", "monthly");
   }
