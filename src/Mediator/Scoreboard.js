@@ -1,5 +1,10 @@
 class Scoreboard {
+  static instance;
   constructor() {
+    if (instance) {
+      return instance;
+    }
+    this.instance = this;
     this.element = document.getElementById('results');
   }
   update = (score) => {
@@ -14,5 +19,5 @@ class Scoreboard {
     this.element.innerHTML = msg;
   }
 }
-let scoreboard = new Scoreboard();
-export default scoreboard;
+
+export default Scoreboard;

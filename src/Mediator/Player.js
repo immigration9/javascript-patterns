@@ -1,4 +1,4 @@
-import mediator from './Mediator';
+import Mediator from './Mediator';
 class Player {
   constructor(name) {
     this.points = 0;
@@ -6,7 +6,7 @@ class Player {
   }
   play = () => {
     this.points += 1;
-    mediator.played();
+    Mediator.played();
   }
 }
 export default Player;

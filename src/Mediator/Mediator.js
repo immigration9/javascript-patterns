@@ -1,6 +1,13 @@
 import scoreboard from './Scoreboard';
 class Mediator {
+  static instance;
+
   constructor() {
+    if (instance) {
+      return instance;
+    }
+    
+    this.instance = this;
     this.players = [];
 
   }
@@ -28,5 +35,4 @@ class Mediator {
     }
   }
 }
-let mediator = new Mediator();
-export default mediator;
+export default Mediator;
